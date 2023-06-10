@@ -3,24 +3,24 @@ Guide originally by ELWAER-M
 
 ## Content
 
-* [Good to Mention](README.md#good-to-mention)
-* [Setting termux up](README.md#setting-termux-up)
-* [Choosing a rootfs](README.md#choosing-a-rootfs)
-* [Extracting the rootfs](README.md#extracting-the-rootfs)
-* [Making a script to launch the chroot environment](README.md#making-a-script-to-launch-the-chroot-environment)
-* [Troubleshooting](README.md#troubleshooting)
-  - [Fixing apt under debian based ditros](README.md#fixing-apt-under-debian-based-ditros)
-  - [Fixing network issues](README.md#fixing-network-issues)
+* [Good to Mention](#good-to-mention)
+* [Setting termux up](#setting-termux-up)
+* [Choosing a rootfs](#choosing-a-rootfs)
+* [Extracting the rootfs](#extracting-the-rootfs)
+* [Making a script to launch the chroot environment](#making-a-script-to-launch-the-chroot-environment)
+* [Troubleshooting](#troubleshooting)
+  - [Fixing apt under debian based ditros](#fixing-apt-under-debian-based-ditros)
+  - [Fixing network issues](#fixing-network-issues)
 
 ## Good to Mention
 
-* You need a [rooted](https://en.m.wikipedia.org/wiki/Rooting_(Android)) phone for that
-* The phone used here a samsung A20 phone running Android 11
+* You need a [rooted](https://en.m.wikipedia.org/wiki/Rooting_(Android)) phone for chroot
+* The phone used here is a samsung A20 phone running Android 11
 * If any damage happens to your phone, you are all responsible for it!
 
 ## Setting termux up
 
-You have to add `root-repo` and install [`tsu`](https://github.com/cswl/tsu) to get the root access under termux environment
+You have to add `root-repo` and install [`tsu`](https://github.com/cswl/tsu) to get the root access under Termux nvironment
 
 ```
 $ apt install root-repo
@@ -29,11 +29,10 @@ $ apt install tsu
 ```
 ## Choosing a rootfs
 
-the rootfs architecture have to match with your device architecture too, to know what architecture your phone have run:
+The rootfs architecture has to match with your device architecture too. In order to know what architecture your phone has:
 
 ```
 $ uname -m
-  aarch64
 ```
 
 (e.g. `aarch64`, `armv7l`).
