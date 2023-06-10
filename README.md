@@ -1,4 +1,4 @@
-# Chroot on termux
+# Chroot on Termux
 Guide originally by ELWAER-M
 
 ## Content
@@ -15,12 +15,12 @@ Guide originally by ELWAER-M
 ## Good to Mention
 
 * You need a [rooted](https://en.m.wikipedia.org/wiki/Rooting_(Android)) phone for that
-* I've used here a samsung A20 phone running Android 11
+* The phone used here a samsung A20 phone running Android 11
 * If any damage happens to your phone, you are all responsible for it!
 
 ## Setting termux up
 
-You have to add root-repo and install [tsu](https://github.com/cswl/tsu) to get the root access under termux environment
+You have to add `root-repo` and install [`tsu`](https://github.com/cswl/tsu) to get the root access under termux environment
 
 ```
 $ apt install root-repo
@@ -50,10 +50,10 @@ $ sudo tar xfp /sdcard/Download/rootfs.tar.xz -C ./chroot #to keep the files per
 
 ## Making a script to launch the chroot environment
 
-Use `vim` or any text editor you like for that:
+Use `vim`, `nano` or any text editor you like for that:
 
 ```
-$ vim run-chroot.sh
+$ nano run-chroot.sh
 ```
 
 simple example:
@@ -91,11 +91,6 @@ $ sudo ./run-chroot.sh
 ```
 
 ## Troubleshooting
-### Fixing apt under debian based ditros
-
-```
-usermod -g 3003 _apt
-```
 
 ### Fixing network issues
 
@@ -119,4 +114,10 @@ then add those groups to the user you using:
 
 ```
 usermod -a -G aid_bt,aid_bt_net,aid_inet,aid_net_raw,aid_admin root
+```
+
+### Fixing apt under debian based ditros
+
+```
+usermod -g 3003 _apt
 ```
